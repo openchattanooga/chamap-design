@@ -37,7 +37,6 @@
             "layout": {
                 "visibility": "visible"
             },
-            "metadata": {},
             "type": "fill",
             "source": "mapbox://mapbox.mapbox-terrain-v2",
             "id": "hillshade",
@@ -272,9 +271,7 @@
                         "street",
                         "street_limited",
                         "service",
-                        "track",
                         "pedestrian",
-                        "path",
                         "link"
                     ],
                     [
@@ -303,6 +300,58 @@
                         ]
                     ]
                 }
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "in",
+                        "class",
+                        "track",
+                        "path",
+                        ""
+                    ],
+                    [
+                        "in",
+                        "structure",
+                        "none",
+                        "ford"
+                    ]
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox",
+            "id": "trails",
+            "paint": {
+                "line-color": "hsl(31, 100%, 20%)",
+                "line-width": {
+                    "base": 1.55,
+                    "stops": [
+                        [
+                            4,
+                            0.25
+                        ],
+                        [
+                            20,
+                            30
+                        ]
+                    ]
+                },
+                "line-opacity": 0.55
             },
             "source-layer": "road"
         },
@@ -601,12 +650,12 @@
         },
         {
             "layout": {},
-            "metadata": {},
             "type": "line",
             "source": "mapbox://mapbox.mapbox-terrain-v2",
             "id": "contour",
             "paint": {
-                "line-color": "hsl(0, 3%, 71%)"
+                "line-color": "hsl(0, 3%, 71%)",
+                "line-opacity": 0.35
             },
             "source-layer": "contour",
             "interactive": true
@@ -903,7 +952,7 @@
     ],
     "created": "2016-03-19T08:41:57.304Z",
     "id": "cilyvyn6r000j9sm2cnsz3kbe",
-    "modified": "2016-03-19T08:55:52.620Z",
+    "modified": "2016-03-23T15:08:24.694Z",
     "owner": "t9er",
     "draft": false
 }
