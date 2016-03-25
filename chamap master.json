@@ -231,7 +231,8 @@
                     "in",
                     "class",
                     "river",
-                    "canal"
+                    "canal",
+                    "stream"
                 ]
             ],
             "paint": {
@@ -248,9 +249,11 @@
                             15
                         ]
                     ]
-                }
+                },
+                "line-opacity": 0.5
             },
-            "interactive": true
+            "interactive": true,
+            "metadata": {}
         },
         {
             "id": "water",
@@ -1031,9 +1034,9 @@
             "source": "composite",
             "id": "place_label_other",
             "paint": {
-                "text-color": "#a3a3a3",
+                "text-color": "#636363",
                 "text-halo-color": "rgba(255,255,255,0.75)",
-                "text-halo-width": 1,
+                "text-halo-width": 3,
                 "text-halo-blur": 1
             },
             "source-layer": "place_label"
@@ -1078,9 +1081,9 @@
             "source": "composite",
             "id": "place_label_city",
             "paint": {
-                "text-color": "hsl(0, 0%, 64%)",
+                "text-color": "hsl(0, 0%, 39%)",
                 "text-halo-color": "rgba(255,255,255,0.75)",
-                "text-halo-width": 1,
+                "text-halo-width": 3,
                 "text-halo-blur": 1
             },
             "source-layer": "place_label"
@@ -1132,6 +1135,43 @@
                 }
             },
             "source-layer": "admin"
+        },
+        {
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "line",
+            "source": "composite",
+            "id": "admin",
+            "paint": {
+                "line-dasharray": [
+                    6,
+                    2,
+                    2,
+                    2
+                ],
+                "line-color": "hsl(240, 17%, 60%)",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            6,
+                            0.5
+                        ],
+                        [
+                            8,
+                            1
+                        ],
+                        [
+                            12,
+                            2
+                        ]
+                    ]
+                },
+                "line-opacity": 0.5
+            },
+            "source-layer": "admin",
+            "interactive": true
         },
         {
             "interactive": true,
@@ -1208,7 +1248,7 @@
     ],
     "created": "2016-03-19T08:41:57.304Z",
     "id": "cilyvyn6r000j9sm2cnsz3kbe",
-    "modified": "2016-03-25T14:07:59.429Z",
+    "modified": "2016-03-25T14:41:13.889Z",
     "owner": "t9er",
     "draft": false
 }
