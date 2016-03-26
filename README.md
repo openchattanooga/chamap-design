@@ -3,7 +3,8 @@ The best outdoor city deserves the best outdoor recreation map. This project is 
 
 Chattanooga has some of the best design talent around. This project is opening up the design of the open outdoor recreation map to the community. See below on how to contribute to the style!
 
-Click [here](https://api.mapbox.com/styles/v1/t9er/cilyvyn6r000j9sm2cnsz3kbe.html?title=true&access_token=pk.eyJ1IjoidDllciIsImEiOiJxeUZmTURjIn0.ZHJTbn3yh5fAcYd6GV0vjQ#13.16/35.0170/-85.3322) to review the design of the current basemap. 
+Click on the image below to review current state of the draft design for the basemap. 
+<a href="https://api.mapbox.com/styles/v1/t9er/cilyvyn6r000j9sm2cnsz3kbe.html?title=true&access_token=pk.eyJ1IjoidDllciIsImEiOiJxeUZmTURjIn0.ZHJTbn3yh5fAcYd6GV0vjQ#13.16/35.0496/-85.3972"><img src="https://api.mapbox.com/styles/v1/t9er/cilyvyn6r000j9sm2cnsz3kbe/static/-85.398732,35.051177,13.16,0.00,0.00/1000x400?access_token=pk.eyJ1IjoidDllciIsImEiOiJxeUZmTURjIn0.ZHJTbn3yh5fAcYd6GV0vjQ" width="1000" height="400" alt="ChaMap Master"> </a> 
 
 This project is created with love for Chattanooga by Open Chattanooga. 
 
