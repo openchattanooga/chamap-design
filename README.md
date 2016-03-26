@@ -23,5 +23,5 @@ The basemap for the open outdoor recreation map is designed using Mapbox studio.
 ### Step 3: Suggest a Design Change to the Basemap
 1. Download your json design file from Mapbox and rename it chamap master.json. 
 2. Sign into Github and fork this project. 
-3. Replace the chamap master.json file with the file you downloaded from Mapbox. 
-4. Send a merge request and provide details about the design improves you made to the basemap. 
+3. Replace the contents of the chamap master.json file with the contents of the file you downloaded from Mapbox. 
+4. Send a merge request and provide details about the design improvements you made to the basemap. 
