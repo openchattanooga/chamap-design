@@ -65,11 +65,21 @@
         },
         {
             "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "==",
+                "class",
+                "grass"
+            ],
+            "type": "fill",
+            "source": "composite",
             "id": "landcover-grass",
             "paint": {
                 "fill-color": "#e7ebd1"
             },
-            "ref": "landcover-crop"
+            "source-layer": "landcover"
         },
         {
             "interactive": true,
@@ -156,7 +166,6 @@
             "layout": {
                 "visibility": "visible"
             },
-            "metadata": {},
             "filter": [
                 "all",
                 [
@@ -261,7 +270,6 @@
             "layout": {
                 "visibility": "visible"
             },
-            "metadata": {},
             "filter": [
                 "all",
                 [
@@ -314,7 +322,6 @@
             "layout": {
                 "visibility": "visible"
             },
-            "metadata": {},
             "filter": [
                 "all",
                 [
@@ -420,13 +427,31 @@
             "source": "composite",
             "source-layer": "landuse",
             "filter": [
-                "==",
+                "in",
                 "class",
-                "park"
+                "park",
+                ""
             ],
             "paint": {
                 "fill-color": "hsl(86, 100%, 31%)",
                 "fill-opacity": 0.25
+            },
+            "interactive": true
+        },
+        {
+            "id": "landuse_sports field",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "landuse",
+            "filter": [
+                "in",
+                "class",
+                "pitch",
+                ""
+            ],
+            "paint": {
+                "fill-color": "hsl(86, 46%, 70%)",
+                "fill-opacity": 0.4
             },
             "interactive": true
         },
@@ -507,7 +532,6 @@
         {
             "interactive": true,
             "layout": {},
-            "metadata": {},
             "filter": [
                 "==",
                 "index",
@@ -691,7 +715,6 @@
                 "line-cap": "round",
                 "line-join": "round"
             },
-            "metadata": {},
             "filter": [
                 "all",
                 [
@@ -852,6 +875,58 @@
                 "line-join": "round"
             },
             "metadata": {},
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "in",
+                        "class",
+                        "motorway_link",
+                        "street",
+                        "street_limited",
+                        "service",
+                        "link"
+                    ],
+                    [
+                        "==",
+                        "structure",
+                        "bridge"
+                    ]
+                ]
+            ],
+            "type": "line",
+            "source": "composite",
+            "id": "bridge_freeway link",
+            "paint": {
+                "line-color": "#dbbdbd",
+                "line-width": {
+                    "base": 1.55,
+                    "stops": [
+                        [
+                            4,
+                            0.25
+                        ],
+                        [
+                            20,
+                            30
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
             "filter": [
                 "all",
                 [
@@ -1093,6 +1168,7 @@
                 "line-cap": "butt",
                 "line-join": "miter"
             },
+            "metadata": {},
             "filter": [
                 "all",
                 [
@@ -1105,7 +1181,6 @@
                     [
                         "in",
                         "class",
-                        "motorway_link",
                         "street",
                         "street_limited",
                         "service",
@@ -1235,7 +1310,6 @@
                     [
                         "in",
                         "class",
-                        "motorway_link",
                         "street",
                         "street_limited",
                         "service",
@@ -1724,11 +1798,73 @@
             },
             "source-layer": "waterway_label",
             "interactive": true
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "==",
+                "type",
+                "taxiway"
+            ],
+            "type": "line",
+            "source": "composite",
+            "id": "aeroway taxiway",
+            "paint": {
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            10,
+                            0.02
+                        ],
+                        [
+                            17,
+                            5
+                        ]
+                    ]
+                },
+                "line-color": "#ddd"
+            },
+            "source-layer": "aeroway"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "==",
+                "type",
+                "runway"
+            ],
+            "type": "line",
+            "source": "composite",
+            "id": "aeroway runway",
+            "paint": {
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            10,
+                            1
+                        ],
+                        [
+                            17,
+                            20
+                        ]
+                    ]
+                },
+                "line-color": "#ddd"
+            },
+            "source-layer": "aeroway"
         }
     ],
     "created": "2016-03-19T08:41:57.304Z",
     "id": "cilyvyn6r000j9sm2cnsz3kbe",
-    "modified": "2016-03-26T00:29:42.861Z",
+    "modified": "2016-03-26T23:12:33.095Z",
     "owner": "t9er",
     "draft": false
 }
