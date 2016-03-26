@@ -50,7 +50,6 @@
             "layout": {
                 "visibility": "visible"
             },
-            "metadata": {},
             "filter": [
                 "==",
                 "class",
@@ -66,7 +65,6 @@
         },
         {
             "interactive": true,
-            "metadata": {},
             "id": "landcover-grass",
             "paint": {
                 "fill-color": "#e7ebd1"
@@ -78,7 +76,6 @@
             "layout": {
                 "visibility": "visible"
             },
-            "metadata": {},
             "filter": [
                 "==",
                 "class",
@@ -97,7 +94,6 @@
             "layout": {
                 "visibility": "visible"
             },
-            "metadata": {},
             "filter": [
                 "==",
                 "class",
@@ -147,7 +143,60 @@
                         ],
                         [
                             17,
-                            0.04
+                            0.02
+                        ]
+                    ]
+                },
+                "fill-antialias": false
+            },
+            "source-layer": "hillshade"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {},
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "highlight"
+                ],
+                [
+                    "==",
+                    "level",
+                    94
+                ]
+            ],
+            "type": "fill",
+            "source": "composite",
+            "id": "hillshade brightest highlight",
+            "paint": {
+                "fill-color": "#ffd",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0.6
+                        ],
+                        [
+                            4,
+                            0.5
+                        ],
+                        [
+                            6,
+                            0.4
+                        ],
+                        [
+                            15,
+                            0.3
+                        ],
+                        [
+                            17,
+                            0.08
                         ]
                     ]
                 },
@@ -161,13 +210,21 @@
                 "visibility": "visible"
             },
             "filter": [
-                "==",
-                "class",
-                "shadow"
+                "all",
+                [
+                    "==",
+                    "class",
+                    "shadow"
+                ],
+                [
+                    "==",
+                    "level",
+                    89
+                ]
             ],
             "type": "fill",
             "source": "composite",
-            "id": "hillshade-shadow",
+            "id": "hillshade light shadow",
             "paint": {
                 "fill-color": "#216",
                 "fill-opacity": {
@@ -191,7 +248,165 @@
                         ],
                         [
                             17,
-                            0.04
+                            0.01
+                        ]
+                    ]
+                },
+                "fill-antialias": true
+            },
+            "source-layer": "hillshade"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {},
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "shadow"
+                ],
+                [
+                    "==",
+                    "level",
+                    78
+                ]
+            ],
+            "type": "fill",
+            "source": "composite",
+            "id": "hillshade medium shadow",
+            "paint": {
+                "fill-color": "#216",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0.3
+                        ],
+                        [
+                            4,
+                            0.2
+                        ],
+                        [
+                            6,
+                            0.1
+                        ],
+                        [
+                            15,
+                            0.08
+                        ],
+                        [
+                            17,
+                            0.01
+                        ]
+                    ]
+                },
+                "fill-antialias": true
+            },
+            "source-layer": "hillshade"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {},
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "shadow"
+                ],
+                [
+                    "==",
+                    "level",
+                    67
+                ]
+            ],
+            "type": "fill",
+            "source": "composite",
+            "id": "hillshade dark shadow",
+            "paint": {
+                "fill-color": "#216",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0.3
+                        ],
+                        [
+                            4,
+                            0.2
+                        ],
+                        [
+                            6,
+                            0.1
+                        ],
+                        [
+                            15,
+                            0.08
+                        ],
+                        [
+                            17,
+                            0.02
+                        ]
+                    ]
+                },
+                "fill-antialias": true
+            },
+            "source-layer": "hillshade"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "shadow"
+                ],
+                [
+                    "==",
+                    "level",
+                    56
+                ]
+            ],
+            "type": "fill",
+            "source": "composite",
+            "id": "hillshade extreme shadow",
+            "paint": {
+                "fill-color": "#216",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0.4
+                        ],
+                        [
+                            4,
+                            0.3
+                        ],
+                        [
+                            6,
+                            0.2
+                        ],
+                        [
+                            15,
+                            0.1
+                        ],
+                        [
+                            17,
+                            0.02
                         ]
                     ]
                 },
@@ -252,8 +467,7 @@
                 },
                 "line-opacity": 0.5
             },
-            "interactive": true,
-            "metadata": {}
+            "interactive": true
         },
         {
             "id": "water",
@@ -265,6 +479,85 @@
                 "fill-outline-color": "hsla(193, 63%, 25%, 0.2)"
             },
             "interactive": true
+        },
+        {
+            "interactive": true,
+            "layout": {},
+            "type": "line",
+            "source": "composite",
+            "id": "contour",
+            "paint": {
+                "line-color": "hsl(0, 3%, 71%)",
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0.6
+                        ],
+                        [
+                            22,
+                            0.2
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "contour"
+        },
+        {
+            "interactive": true,
+            "layout": {},
+            "metadata": {},
+            "filter": [
+                "==",
+                "index",
+                2
+            ],
+            "type": "line",
+            "source": "composite",
+            "id": "contour big breaks",
+            "paint": {
+                "line-color": "#b7b3b3",
+                "line-width": 1.5,
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0.6
+                        ],
+                        [
+                            22,
+                            0.2
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "contour"
+        },
+        {
+            "interactive": true,
+            "minzoom": 12,
+            "layout": {
+                "text-field": "{ele} m",
+                "symbol-placement": "line",
+                "text-size": 10
+            },
+            "maxzoom": 17,
+            "filter": [
+                "==",
+                "index",
+                2
+            ],
+            "type": "symbol",
+            "source": "composite",
+            "id": "contour big breaks label",
+            "paint": {
+                "text-color": "hsl(0, 3%, 50%)",
+                "text-halo-color": "hsl(0, 0%, 93%)",
+                "text-halo-width": 1.5
+            },
+            "source-layer": "contour"
         },
         {
             "id": "building",
@@ -398,6 +691,58 @@
                 "line-cap": "round",
                 "line-join": "round"
             },
+            "metadata": {},
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "in",
+                        "class",
+                        "service",
+                        ""
+                    ],
+                    [
+                        "in",
+                        "structure",
+                        "none",
+                        "ford"
+                    ]
+                ]
+            ],
+            "type": "line",
+            "source": "composite",
+            "id": "road_minor service",
+            "paint": {
+                "line-color": "hsl(0, 0%, 100%)",
+                "line-width": {
+                    "base": 1.55,
+                    "stops": [
+                        [
+                            4,
+                            0.25
+                        ],
+                        [
+                            20,
+                            15
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round",
+                "visibility": "visible"
+            },
             "filter": [
                 "all",
                 [
@@ -413,7 +758,6 @@
                         "motorway_link",
                         "street",
                         "street_limited",
-                        "service",
                         "pedestrian",
                         "link",
                         ""
@@ -449,21 +793,10 @@
         },
         {
             "interactive": true,
-            "layout": {},
-            "type": "line",
-            "source": "composite",
-            "id": "contour",
-            "paint": {
-                "line-color": "hsl(0, 3%, 71%)",
-                "line-opacity": 0.6
-            },
-            "source-layer": "contour"
-        },
-        {
-            "interactive": true,
             "layout": {
                 "line-cap": "round",
-                "line-join": "round"
+                "line-join": "round",
+                "visibility": "visible"
             },
             "filter": [
                 "all",
@@ -495,7 +828,106 @@
             "source": "composite",
             "id": "road_major",
             "paint": {
-                "line-color": "#fff",
+                "line-color": "hsl(0, 0%, 100%)",
+                "line-width": {
+                    "base": 1.4,
+                    "stops": [
+                        [
+                            6,
+                            0.5
+                        ],
+                        [
+                            20,
+                            20
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "metadata": {},
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "class",
+                        "motorway_link"
+                    ],
+                    [
+                        "in",
+                        "structure",
+                        "none",
+                        "ford"
+                    ]
+                ]
+            ],
+            "type": "line",
+            "source": "composite",
+            "id": "road_major freeway link",
+            "paint": {
+                "line-color": "hsl(0, 29%, 80%)",
+                "line-width": {
+                    "base": 1.4,
+                    "stops": [
+                        [
+                            6,
+                            0.2
+                        ],
+                        [
+                            20,
+                            10
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "class",
+                        "motorway"
+                    ],
+                    [
+                        "in",
+                        "structure",
+                        "none",
+                        "ford"
+                    ]
+                ]
+            ],
+            "type": "line",
+            "source": "composite",
+            "id": "road_major freeway",
+            "paint": {
+                "line-color": "hsl(0, 27%, 84%)",
                 "line-width": {
                     "base": 1.4,
                     "stops": [
@@ -526,7 +958,7 @@
             ],
             "type": "line",
             "source": "composite",
-            "id": "recreation-trails",
+            "id": "thrive trails",
             "paint": {
                 "line-color": "hsl(38, 20%, 61%)",
                 "line-width": {
@@ -582,11 +1014,11 @@
                     "stops": [
                         [
                             4,
-                            0.25
+                            1.5
                         ],
                         [
                             20,
-                            30
+                            15
                         ]
                     ]
                 },
@@ -873,6 +1305,54 @@
             "id": "bridge_major",
             "paint": {
                 "line-color": "#fff",
+                "line-width": {
+                    "base": 1.4,
+                    "stops": [
+                        [
+                            6,
+                            0.5
+                        ],
+                        [
+                            20,
+                            30
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "class",
+                        "motorway"
+                    ],
+                    [
+                        "==",
+                        "structure",
+                        "bridge"
+                    ]
+                ]
+            ],
+            "type": "line",
+            "source": "composite",
+            "id": "bridge_major freeway",
+            "paint": {
+                "line-color": "#e1cbcb",
                 "line-width": {
                     "base": 1.4,
                     "stops": [
@@ -1248,7 +1728,7 @@
     ],
     "created": "2016-03-19T08:41:57.304Z",
     "id": "cilyvyn6r000j9sm2cnsz3kbe",
-    "modified": "2016-03-25T14:41:13.889Z",
+    "modified": "2016-03-26T00:29:42.861Z",
     "owner": "t9er",
     "draft": false
 }
