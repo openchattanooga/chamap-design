@@ -14,7 +14,7 @@
     "pitch": 0,
     "sources": {
         "composite": {
-            "url": "mapbox://mapbox.mapbox-streets-v7,mapbox.mapbox-terrain-v2,t9er.69dlwahe",
+            "url": "mapbox://mapbox.mapbox-streets-v7,mapbox.mapbox-terrain-v2,t9er.69dlwahe,t9er.2gw6wr22",
             "type": "vector"
         }
     },
@@ -25,7 +25,7 @@
             "id": "background",
             "type": "background",
             "paint": {
-                "background-color": "#f4efe1"
+                "background-color": "hsl(38, 35%, 89%)"
             },
             "interactive": true
         },
@@ -874,7 +874,6 @@
                 "line-cap": "round",
                 "line-join": "round"
             },
-            "metadata": {},
             "filter": [
                 "all",
                 [
@@ -1168,7 +1167,6 @@
                 "line-cap": "butt",
                 "line-join": "miter"
             },
-            "metadata": {},
             "filter": [
                 "all",
                 [
@@ -1499,20 +1497,21 @@
             "interactive": true,
             "minzoom": 5,
             "layout": {
+                "text-size": 11,
                 "icon-image": "{maki}-11",
-                "text-offset": [
-                    0,
-                    0.5
-                ],
-                "text-field": "{name_en}",
                 "text-font": [
                     "Open Sans Semibold",
                     "Arial Unicode MS Bold"
                 ],
-                "text-max-width": 8,
+                "visibility": "visible",
+                "text-offset": [
+                    0,
+                    0.5
+                ],
+                "icon-size": 1,
                 "text-anchor": "top",
-                "text-size": 11,
-                "icon-size": 1
+                "text-field": "{name_en}",
+                "text-max-width": 8
             },
             "filter": [
                 "all",
@@ -1860,11 +1859,107 @@
                 "line-color": "#ddd"
             },
             "source-layer": "aeroway"
+        },
+        {
+            "minzoom": 12,
+            "layout": {
+                "visibility": "visible",
+                "icon-image": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            "hiker"
+                        ],
+                        [
+                            22,
+                            "hiker"
+                        ]
+                    ]
+                },
+                "icon-size": 1,
+                "text-anchor": "top",
+                "text-offset": [
+                    0,
+                    1
+                ],
+                "text-size": 10
+            },
+            "type": "symbol",
+            "source": "composite",
+            "id": "trail-parking",
+            "paint": {
+                "text-color": "hsl(0, 0%, 30%)",
+                "icon-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            10,
+                            0
+                        ],
+                        [
+                            11,
+                            1
+                        ],
+                        [
+                            15,
+                            1
+                        ]
+                    ]
+                },
+                "text-opacity": 1
+            },
+            "source-layer": "trail_parking",
+            "interactive": true
+        },
+        {
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible",
+                "icon-image": "hiker",
+                "icon-size": 1,
+                "text-anchor": "top",
+                "text-offset": [
+                    0,
+                    1
+                ],
+                "text-size": 10,
+                "text-field": "{Name}"
+            },
+            "type": "symbol",
+            "source": "composite",
+            "id": "trail-parking label",
+            "paint": {
+                "text-color": "hsl(0, 0%, 30%)",
+                "icon-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            10,
+                            0
+                        ],
+                        [
+                            11,
+                            0.5
+                        ],
+                        [
+                            15,
+                            1
+                        ]
+                    ]
+                },
+                "text-opacity": 1,
+                "text-halo-color": "#fff",
+                "text-halo-blur": 1,
+                "text-halo-width": 2
+            },
+            "source-layer": "trail_parking",
+            "interactive": true
         }
     ],
     "created": "2016-03-19T08:41:57.304Z",
     "id": "cilyvyn6r000j9sm2cnsz3kbe",
-    "modified": "2016-03-26T23:12:33.095Z",
+    "modified": "2016-03-28T19:40:00.168Z",
     "owner": "t9er",
     "draft": false
 }
