@@ -1024,7 +1024,6 @@
             "source": "composite",
             "source-layer": "recreation_trails",
             "minzoom": 7,
-            "maxzoom": 13,
             "interactive": true,
             "filter": [
                 "==",
@@ -1070,17 +1069,25 @@
                     "LineString"
                 ],
                 [
-                    "in",
-                    "class",
-                    "track",
-                    "path",
-                    ""
+                    "all",
+                    [
+                        "in",
+                        "class",
+                        "track",
+                        "path",
+                        ""
+                    ],
+                    [
+                        "!=",
+                        "type",
+                        "footway"
+                    ]
                 ]
             ],
             "layout": {
                 "line-cap": "round",
                 "line-join": "round",
-                "visibility": "visible"
+                "visibility": "none"
             },
             "paint": {
                 "line-color": "#afa188",
@@ -1100,6 +1107,61 @@
                 "line-opacity": 1,
                 "line-dasharray": [
                     1,
+                    2
+                ]
+            }
+        },
+        {
+            "id": "foot trails",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "road",
+            "minzoom": 13,
+            "interactive": true,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "class",
+                        "path"
+                    ],
+                    [
+                        "==",
+                        "type",
+                        "footway"
+                    ]
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "hsl(72, 37%, 65%)",
+                "line-width": {
+                    "base": 1.55,
+                    "stops": [
+                        [
+                            4,
+                            1
+                        ],
+                        [
+                            20,
+                            8
+                        ]
+                    ]
+                },
+                "line-opacity": 1,
+                "line-dasharray": [
+                    0.5,
                     2
                 ]
             }
@@ -1978,7 +2040,7 @@
     ],
     "created": "2016-03-19T08:41:57.304Z",
     "id": "cilyvyn6r000j9sm2cnsz3kbe",
-    "modified": "2016-04-03T13:44:25.149Z",
+    "modified": "2016-04-29T20:24:00.987Z",
     "owner": "t9er",
     "draft": false
 }
